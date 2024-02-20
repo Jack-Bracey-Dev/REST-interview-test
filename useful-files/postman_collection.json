@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "6d7602f6-6a83-41af-9b7b-728950d2a030",
+		"name": "Rest Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28630260"
+	},
+	"item": [
+		{
+			"name": "Get Customer(s)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/customer?ids=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "",
+							"description": "Comma separated integer ids (e.g. 1,2,3)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create / Update Customer with CSV file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "CSV file containing customer information (Examples within the project 'src/test/resources'",
+							"type": "file",
+							"src": "/E:/Intellij-Projects/rest-test-exercise/useful-files/changed-layout-data.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
